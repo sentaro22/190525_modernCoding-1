@@ -1,0 +1,326 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+  font-family: 'YuGothic','Yu Gothic','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3','メイリオ', 'Meiryo','ＭＳ ゴシック', sans-serif;
+}
+/*▼h2非表示用*/
+.hidden {
+  display: none;
+}
+/*▲h2非表示用*/
+/*▼clearfix*/
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+/*▲clearfix*/
+/*▼見出し*/
+.heading {
+  padding: 10px 12px;
+  background: url(../images/bg-slash.gif);
+  font-weight: bold;
+}
+/*▲見出し*/
+.header {
+  width: 100%;
+  text-align: center;
+  background-image:url(../images/bg-header.gif); 
+}
+.header .rogo {
+  width: 224px;
+  margin-top: 30px;
+  display: inline-block;
+}
+.gnav {
+  margin: 26px 0 20px;
+  text-align: center;
+}
+.gnav .gnav-item {
+  margin: 0 10px;
+  display: inline-block;
+}
+.gnav .gnav-item a {
+  text-decoration: none;
+  color: #333;
+  padding: 8px 26px;
+}
+.gnav .gnav-item a:hover {
+  color: #fff;
+  border-radius: 5px;
+  background-color: #d03c56;
+}
+.wrapper {
+  width: 970px;
+  margin: 0 auto;
+}
+.main {
+  width: 660px;
+  float: left;
+}
+.hot-topic {
+  margin-bottom: 30px;
+  height: 300px;
+  width: 660px;
+  background-color: #2d3d54;
+}
+.hot-topic .image {
+  float: left;
+}
+.hot-topic .text {
+  box-sizing: border-box;
+  padding: 112px 35px 0 35px;
+  width: 330px;
+  float: right;
+  position: relative;
+}
+.hot-topic .text .title {
+  margin-bottom: 20px;
+  line-height: 1.5;
+  font-size: 20px;
+  color: #fff;
+}
+.hot-topic .text .desc {
+  line-height: 1.5;
+  font-size: 12px;
+  color: #ccc;
+}
+.hot-topic .date {
+  font-size: 11px;
+  font-weight: bold;
+  padding: 5px 16px;
+  background-color: #fff;
+  letter-spacing: 1px;
+  position:absolute;
+  top: 60px;
+  left: 0;
+}
+.news .news-item {
+  padding: 10px 15px;
+  text-align: 5px;
+  font-size: 0;
+}
+.news .news-item .date {
+  width: 120px;
+  font-size: 10px;
+  display: inline-block;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.news .news-item .category {
+  margin-right: 15px;
+  text-align: center;
+  width: 50px;
+  padding: 4px 0;
+  display: inline-block;
+  font-size: 10px;
+  color: #fff;
+  letter-spacing: 1px;
+}
+.news .news-item .news {
+  background-color: #d03c56;
+  border-radius: 5px;
+}
+.news .news-item .topic {
+  background-color: #2d3d54;
+  border-radius: 5px;
+}
+.news .news-item .title {
+  font-size: 12px;
+  display: inline-block;
+}
+.news .news-item:nth-of-type(even) {
+  background: url(../images/bg-slash.gif);
+}
+.news .news-item:last-of-type {
+  margin-bottom: 30px;
+}
+.articles {
+  
+}
+.articles a {
+  text-decoration: none;
+}
+.articles-item {
+  margin-bottom: 30px;
+  width: 315px;
+  display: block;
+  float: left;
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.1);
+}
+.articles-item:nth-of-type(odd) {
+  margin-right: 30px;
+}
+.articles-item .text {
+  padding: 34px 15px;
+  position: relative;
+}
+.articles-item .text .title {
+  margin-bottom: 8px;
+  color: #333;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.articles-item .text .desc {
+  margin-bottom: 60px;
+  color: #333;
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.articles-item .text .date {
+  padding: 5px 0;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 1px;
+  display: block;
+  width: 160px;
+  color: #333;
+  font-size: 11px;
+  background-color: #b5d163;
+  position: absolute;
+  bottom: 35px;
+  right: 0;
+}
+.sidemenu {
+  width: 275px;
+  float: right;
+}
+.sidemenu .heading:nth-of-type(2) {
+  margin-top: 30px;
+}
+.ranking {
+  list-style: none;
+  counter-reset: ranking; /*好きな名前を作成可能。今回は"ranking"*/
+}
+.ranking-item {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+}
+.ranking .image {
+  float: left;
+  width: 55px;
+}
+.ranking .number {
+  /*width: 38px;*/
+  float: left;
+  margin: 0 10px;
+  width: 18px;
+  height: 18px;
+  font-size: 10px;
+  font-weight: bold;
+  color: #aaa;
+  box-align: center;
+  transform: rotate(45deg);
+  background-color: #fff;
+  border: solid 1px #aaa;
+  box-sizing: border-box;
+}
+.ranking-item:nth-of-type(1) .number {
+  background-color: #dab413;
+  border: solid 1px #d5aa00;
+  color: #fff;
+}
+.ranking-item:nth-of-type(2) .number {
+  background-color: #6e7b84;
+  border: solid 1px #5a6974;
+  color: #fff;
+}
+.ranking-item:nth-of-type(3) .number {
+  background-color: #a0531a;
+  border: solid 1px #943d00;
+  color: #fff;
+}
+.ranking .ranking-item .number::before {
+  margin-left: 5px;
+  margin-top: 3px;
+  content: counter(ranking);/*先ほど指定したrankingの内容を表示*/
+  counter-increment: ranking;/*rankingの順位をカウントアップ*/
+  display: inline-block;
+  transform: rotate(-45deg);
+}
+.ranking .title {
+  width: 182px;
+  font-size: 12px;
+  line-height: 1.5;
+  float: left;
+}
+.documents {
+  margin-bottom: 30px;
+}
+.documents .title {
+  font-size: 14px;
+  font-weight: bold;
+  border-left: 5px solid #cd2f4b;
+  padding-left: 8px;
+  margin: 16px 10px;
+}
+.documents .title:nth-of-type(n+2) {
+  margin-top: 26px;
+}
+.documents ul {
+  list-style: none;
+}
+.documents .documents-item {
+  margin-left: 24px;
+  margin-bottom: 14px;
+}
+.documents .image {
+  margin-bottom: 1px;
+}
+.documents .text {
+  text-decoration: none;
+  font-size: 12px;
+  color: #cd2f4b;
+}
+.documents a:hover {
+  color: #d2536a;
+}
+.documents p {
+  font-size: 12px;
+  margin-left: 10px;
+}
+.search-box {
+  background-color: #ccc;
+  padding: 15px;
+}
+.search-box .search-input {
+  width: 205px;
+  height: 26px;
+  padding-left: 10px;
+  box-sizing: border-box;
+  font-size: 10px;
+  border: none;
+  float: left;
+}
+.search-box .search-button {
+  width: 40px;
+  height: 26px;
+  font-size: 12px;
+  border-radius: 0;
+  background-color: #d03c56;
+  color: #fff;
+  border: none;
+  float: left;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
